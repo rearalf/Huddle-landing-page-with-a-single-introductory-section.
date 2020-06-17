@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 100%, 86%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--Violet: hsl(257, 40%, 49%);
+	--Body: 'Open Sans', sans-serif;
+	--Headings: 'Poppins', sans-serif;
+	--White: hsl(0, 0%, 100%);
+}
+
+body {
+	font-family: var(--Body);
+	background-color: var(--Violet);
+	background-image: url('images/bg-desktop.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: var(--White);
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	height: 100vh;
+}
+
+.header {
+	padding: 40px 0;
+}
+
+.header img {
+	width: 200px;
+}
+
+.content {
+	display: grid;
+	grid-template-areas: "col-1 col-2";
+	grid-gap: 30px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.col-1 {
+	grid-area: col-1;
+}
+
+.col-1 img {
+	width: 700px;
+	height: 400px;
+}
+
+.col-2 {
+	grid-area: col-2;
+}
+
+.col-2 h1 {
+	font-family: var(--Headings);
+	font-weight: 700;
+	margin: 40px 0 20px;
+}
+
+.col-2 p {
+	font-weight: 400;
+	margin-bottom: 30px;
+	font-size: .9em;
+}
+
+.btn {
+	color: var(--Violet);
+	background-color: var(--White);
+	border: 0;
+	padding: 15px 40px;
+	border-radius: 30px;
+	cursor: pointer;
+	box-shadow: 4px 4px 10px 0 #000000;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.social {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.social i {
+	padding: 10px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin-left: 10px;
+}
+
+@media (max-width: 890px) {
+	body {
+		background-image: url('images/bg-mobile.svg');
+	}
+	.container {
+		height: auto;
+	}
+
+	.content {
+		grid-template-areas: "col-1" "col-2";
+		margin-bottom: 50px;
+	}
+
+	.col-1 {
+		justify-self: center;
+	}
+
+	.col-1 img {
+		width: 300px;
+		height: auto;
+	}
+
+	.col-2 h1 {
+		margin: 0;
+		margin-bottom: 10px;
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	.col-2 p {
+		text-align: center;
+	}
+
+	.col-2 .btn {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+	}
+
+	.social {
+		float: none;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+}
